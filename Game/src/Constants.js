@@ -8,5 +8,7 @@ export default Constants = {
     HALF_WIDTH: Dimensions.get("screen").width/2,
     BUG_SIZE:  Dimensions.get("screen").width/8,
     HIT_BOX_WIDTH:  Dimensions.get("screen").width/16,
-    HIT_BOX_HEIGHT:  Dimensions.get("screen").width/10
+    HIT_BOX_HEIGHT:  Dimensions.get("screen").width/10,
+    LADYBUG_SPEED: 11 / (Dimensions.get("screen").height / Dimensions.get("screen").width),
+    ANT_SPEED: 15 / (Dimensions.get("screen").height / Dimensions.get("screen").width)
 };

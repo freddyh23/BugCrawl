@@ -17,7 +17,10 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-3078836171735632~3290183252"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"

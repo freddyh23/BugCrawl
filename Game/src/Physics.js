@@ -32,11 +32,11 @@ const Physics = (entities, {touches, time, dispatch}) => {
     //Start to move the ants
     if(entities["antBottom1"].body.velocity.y === 0) {
         for (let i = 1; i <= 4; i++) {
-            Matter.Body.setVelocity(entities[("antBottom" + i)].body, {x: 0, y: 5});
+            Matter.Body.setVelocity(entities[("antBottom" + i)].body, {x: 0, y: Constants.ANT_SPEED});
         }
     } else if(entities["antTop1"].body.velocity.y === 0) {
         for (let i = 1; i <= 4; i++) {
-            Matter.Body.setVelocity(entities[("antTop" + i)].body, {x: 0, y: 5});
+            Matter.Body.setVelocity(entities[("antTop" + i)].body, {x: 0, y: Constants.ANT_SPEED});
         }
     }
 
@@ -60,9 +60,9 @@ const Physics = (entities, {touches, time, dispatch}) => {
     //tapped on the right side of the screen
     touches.filter(t => t.type === "press").forEach(t => {
         if (t.event.pageX < Constants.HALF_WIDTH) {
-            Matter.Body.setVelocity(ladyBug, {x: -4, y: 0});
+            Matter.Body.setVelocity(ladyBug, {x: -Constants.LADYBUG_SPEED, y: 0});
         } else {
-            Matter.Body.setVelocity(ladyBug, {x: 4, y: 0});
+            Matter.Body.setVelocity(ladyBug, {x: Constants.LADYBUG_SPEED, y: 0});
         }
     });
 
